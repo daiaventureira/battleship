@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-image: url(./assets/texture.png), linear-gradient(-135deg ,  rgba(0,0,0,1)  0%,  rgba(53,92,125,1) 100%);
+    width: 100%;
+    height: 100%;
+}
+.container{
+    width: 580px;
+    height: 580px;
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-color: #d3f4ff;
+    margin:auto; 
+    border: 2px solid #b2dffb ;
+    border-radius: .5px;
+    display: flex;
+
+    &:hover{
+        background-color: #a1e6e3;
+    }
+
+    .tile {
+        position: relative;
+        background-color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+
+        &.ship{
+            background-color: pink;
+        }
+        &.water{
+             background-image: url(./assets/texture.png), linear-gradient(-135deg ,  rgba(0,0,0,1)  0%,  rgba(53,92,125,1) 100%);
+        }  
+    }
+}
+.board{
+    display: flex;
+    justify-content: space-around;
+}
+
+.container .column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.titleGame{
+    text-align: center;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 25px;
+    margin-top: 2%;
+    color: #fafba4;
+}
+.counterShip, .counterWater{
+    font-size: 30px;
+    line-height: 4.5em;
+    margin-left:5%;
+    color: #fafba4;
+}
